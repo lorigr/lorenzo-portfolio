@@ -22,7 +22,7 @@ export const HoverEffect = ({
     <div
       className={cn(
         "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4",
-        className
+        className,
       )}
     >
       {items.map((item, idx) => (
@@ -50,6 +50,16 @@ export const HoverEffect = ({
           <Card>
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
+            {item.link && (
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex w-fit text-xs font-mono text-white/60 hover:text-white transition-colors"
+              >
+                View repository
+              </a>
+            )}
             {item.tags && (
               <div className="flex flex-wrap gap-2 mt-4">
                 {item.tags.map((tag) => (
@@ -80,7 +90,7 @@ export const Card = ({
     <div
       className={cn(
         "rounded-2xl h-full w-full p-6 overflow-hidden bg-black border border-white/10 group-hover:border-white/20 relative z-20 transition-all duration-300",
-        className
+        className,
       )}
     >
       <div className="relative z-50 h-full flex flex-col">{children}</div>
@@ -99,7 +109,7 @@ export const CardTitle = ({
     <h4
       className={cn(
         "text-white font-semibold tracking-wide text-lg mb-2",
-        className
+        className,
       )}
     >
       {children}
@@ -118,7 +128,7 @@ export const CardDescription = ({
     <p
       className={cn(
         "text-white/50 text-sm leading-relaxed tracking-wide flex-1",
-        className
+        className,
       )}
     >
       {children}

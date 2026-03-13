@@ -2,30 +2,30 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Github, ExternalLink } from "lucide-react";
+import { Github } from "lucide-react";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 
 const projects = [
   {
-    title: "Project Alpha",
+    title: "Voice Presentation",
     description:
-      "Placeholder: describe what this project does, the problem it solves, and who it helps. Replace with your real project.",
-    link: "https://github.com",
-    tags: ["Next.js", "TypeScript", "Tailwind"],
+      "A real-time tool that transcribes live speech with an LLM and generates a presentation deck as you speak. It also explores a Chrome extension to capture tab audio as input.",
+    link: "https://github.com/lorigr/voice-presentation",
+    tags: ["LLM", "Real-time", "Speech-to-Text", "Chrome Extension"],
   },
   {
-    title: "Project Beta",
+    title: "Recipe Finder",
     description:
-      "Placeholder: a short and compelling description of the project. Mention the stack, the challenge, and the result.",
-    link: "https://github.com",
-    tags: ["React", "Node.js", "PostgreSQL"],
+      "A mobile-first PWA that suggests recipes from ingredients available in your fridge or pantry, taking expiration dates into account and using an LLM to generate personalized ideas.",
+    link: "https://github.com/lorigr/recipe-finder",
+    tags: ["PWA", "Mobile", "LLM", "Food Tech"],
   },
   {
-    title: "Project Gamma",
+    title: "Welbemo.com",
     description:
-      "Placeholder: describe what makes this project interesting. Open source? Significant performance gains? Solve a real pain point?",
-    link: "https://github.com",
-    tags: ["Python", "Docker", "AWS"],
+      "Former startup product: a web app that tracks employee mental well-being, then returns data-driven insights and suggested actions for companies.",
+    link: "https://github.com/lorigr/buddywork-landing",
+    tags: ["Startup", "Web App", "Analytics", "Mental Well-being"],
   },
 ];
 
