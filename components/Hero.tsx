@@ -93,7 +93,7 @@ export default function Hero() {
             className="flex flex-wrap items-center gap-4 mt-2"
           >
             <a
-              href="https://github.com"
+              href="https://github.com/lorigr"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-medium rounded-full hover:bg-white/90 transition-all duration-200 hover:scale-[1.02]"
