@@ -68,7 +68,7 @@ export default function Contact() {
 
             {/* Main CTA */}
             <motion.a
-              href="mailto:your@email.com"
+              href="mailto:9lorenzograssi9@gmail.com"
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
