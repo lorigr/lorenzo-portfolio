@@ -25,7 +25,7 @@ export default function About() {
           </div>
 
           {/* Right content */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-4">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -43,11 +43,13 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-white/50 text-base leading-relaxed max-w-xl"
             >
-              {/* Placeholder — replace with your real bio */}
-              Hi, I&apos;m Lorenzo. I&apos;m a software developer with a passion
-              for crafting clean, efficient, and user-focused applications. I
-              enjoy working across the full stack, from designing elegant APIs
-              to building smooth, responsive interfaces.
+              Hi, I&apos;m Lorenzo. I&apos;m a software developer who loves
+              turning ideas into useful digital products. I enjoy crafting
+              clean, efficient, and user-focused applications, and I like moving
+              across the full stack, from designing solid APIs to building
+              smooth, responsive interfaces. I&apos;m always testing new
+              technologies, experimenting with different tools, and building
+              apps that can genuinely improve people&apos;s everyday lives.
             </motion.p>
 
             <motion.p
@@ -56,9 +58,8 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-white/50 text-base leading-relaxed max-w-xl"
             >
-              When I&apos;m not writing code, I&apos;m exploring new
-              technologies, contributing to open source, or thinking about how
-              software shapes the way people live and work.
+              Outside of coding, I run marathons and half marathons, listen to a
+              lot of music, and regularly participate in music festivals.
             </motion.p>
           </div>
         </motion.div>

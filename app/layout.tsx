@@ -24,11 +24,9 @@ export const metadata: Metadata = {
     "Official portfolio of Lorenzo Grassi, software developer focused on clean, scalable, and meaningful digital products.",
   keywords: [
     "Lorenzo Grassi",
-    "Lorenzo Grassi software developer",
     "Lorenzo Grassi portfolio",
-    "full stack developer",
-    "web developer",
-    "software engineer",
+    "software developer",
+    "full-stack developer",
   ],
   alternates: {
     canonical: "/",
@@ -50,17 +48,6 @@ export const metadata: Metadata = {
     title: "Lorenzo Grassi | Software Developer",
     description:
       "Official portfolio of Lorenzo Grassi, software developer focused on clean, scalable, and meaningful digital products.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
   },
 };
 

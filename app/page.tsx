@@ -14,6 +14,17 @@ export const metadata: Metadata = {
   title: "Lorenzo Grassi Portfolio",
   description:
     "Lorenzo Grassi is a software developer building full-stack products, from backend architecture to polished frontend experiences.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   alternates: {
     canonical: "/",
   },
