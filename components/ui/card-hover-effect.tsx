@@ -7,28 +7,41 @@ import { cn } from "@/lib/utils";
 export const HoverEffect = ({
   items,
   className,
+  horizontal = false,
+  scrollRef,
 }: {
   items: {
     title: string;
     description: string;
     link?: string;
+    titleLink?: string;
     tags?: string[];
   }[];
   className?: string;
+  horizontal?: boolean;
+  scrollRef?: React.Ref<HTMLDivElement>;
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <div
+      ref={scrollRef}
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4",
+        horizontal
+          ? "w-full max-w-full flex flex-nowrap gap-4 overflow-x-auto pb-2 snap-x snap-mandatory"
+          : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4",
         className,
       )}
     >
       {items.map((item, idx) => (
         <div
           key={idx}
-          className="relative group block p-2 h-full w-full"
+          className={cn(
+            "relative group block p-2 h-full",
+            horizontal
+              ? "flex-none w-full md:w-[calc((100%-1rem)/2)] snap-start"
+              : "w-full",
+          )}
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -48,7 +61,20 @@ export const HoverEffect = ({
             />
           )}
           <Card>
-            <CardTitle>{item.title}</CardTitle>
+            <CardTitle>
+              {item.titleLink ? (
+                <a
+                  href={item.titleLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white/80 transition-colors"
+                >
+                  {item.title}
+                </a>
+              ) : (
+                item.title
+              )}
+            </CardTitle>
             <CardDescription>{item.description}</CardDescription>
             {item.link && (
               <a
