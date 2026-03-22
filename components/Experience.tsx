@@ -16,6 +16,7 @@ const experiences = [
   {
     role: "Co-Founder",
     company: "Welbemo.com",
+    link: "https://buddywork-landing-inky.vercel.app/",
     period: "January 2024 – October 2025",
     description:
       "Co-founded Welbemo, a startup born from my master thesis project focused on the design and development of a web application. The platform helps companies monitor and improve employees' mental well-being through validated questionnaires and artificial intelligence.",
@@ -78,37 +79,78 @@ export default function Experience() {
                     transition={{ duration: 0.5, delay: idx * 0.15 }}
                     className="group"
                   >
-                    <div className="flex flex-col gap-2 p-6 rounded-xl border border-white/5 bg-white/[0.02] hover:border-white/10 hover:bg-white/[0.04] transition-all duration-300">
-                      {/* Header row */}
-                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                        <div>
-                          <h3 className="text-white font-semibold text-lg">
-                            {exp.role}
-                          </h3>
-                          <p className="text-white/50 text-sm">{exp.company}</p>
+                    {exp.link ? (
+                      <a
+                        href={exp.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30 rounded-xl"
+                      >
+                        <div className="flex flex-col gap-2 p-6 rounded-xl border border-white/5 bg-white/[0.02] hover:border-white/10 hover:bg-white/[0.04] transition-all duration-300 cursor-pointer">
+                          {/* Header row */}
+                          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                            <div>
+                              <h3 className="text-white font-semibold text-lg">
+                                {exp.role}
+                              </h3>
+                              <p className="text-white/50 text-sm">{exp.company}</p>
+                            </div>
+                            <span className="font-mono text-xs text-white/25 shrink-0">
+                              {exp.period}
+                            </span>
+                          </div>
+
+                          {/* Description */}
+                          <p className="text-white/40 text-sm leading-relaxed mt-2">
+                            {exp.description}
+                          </p>
+
+                          {/* Tags */}
+                          <div className="flex flex-wrap gap-2 mt-3">
+                            {exp.tags.map((tag) => (
+                              <span
+                                key={tag}
+                                className="font-mono text-xs text-white/30 border border-white/10 rounded-full px-2.5 py-1"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
                         </div>
-                        <span className="font-mono text-xs text-white/25 shrink-0">
-                          {exp.period}
-                        </span>
-                      </div>
-
-                      {/* Description */}
-                      <p className="text-white/40 text-sm leading-relaxed mt-2">
-                        {exp.description}
-                      </p>
-
-                      {/* Tags */}
-                      <div className="flex flex-wrap gap-2 mt-3">
-                        {exp.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="font-mono text-xs text-white/30 border border-white/10 rounded-full px-2.5 py-1"
-                          >
-                            {tag}
+                      </a>
+                    ) : (
+                      <div className="flex flex-col gap-2 p-6 rounded-xl border border-white/5 bg-white/[0.02] hover:border-white/10 hover:bg-white/[0.04] transition-all duration-300">
+                        {/* Header row */}
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                          <div>
+                            <h3 className="text-white font-semibold text-lg">
+                              {exp.role}
+                            </h3>
+                            <p className="text-white/50 text-sm">{exp.company}</p>
+                          </div>
+                          <span className="font-mono text-xs text-white/25 shrink-0">
+                            {exp.period}
                           </span>
-                        ))}
+                        </div>
+
+                        {/* Description */}
+                        <p className="text-white/40 text-sm leading-relaxed mt-2">
+                          {exp.description}
+                        </p>
+
+                        {/* Tags */}
+                        <div className="flex flex-wrap gap-2 mt-3">
+                          {exp.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="font-mono text-xs text-white/30 border border-white/10 rounded-full px-2.5 py-1"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </motion.div>
                 ))}
               </div>
