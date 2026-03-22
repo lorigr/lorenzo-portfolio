@@ -93,7 +93,9 @@ export default function Experience() {
                               <h3 className="text-white font-semibold text-lg">
                                 {exp.role}
                               </h3>
-                              <p className="text-white/50 text-sm">{exp.company}</p>
+                              <p className="text-white/50 text-sm">
+                                {exp.company}
+                              </p>
                             </div>
                             <span className="font-mono text-xs text-white/25 shrink-0">
                               {exp.period}
@@ -126,7 +128,9 @@ export default function Experience() {
                             <h3 className="text-white font-semibold text-lg">
                               {exp.role}
                             </h3>
-                            <p className="text-white/50 text-sm">{exp.company}</p>
+                            <p className="text-white/50 text-sm">
+                              {exp.company}
+                            </p>
                           </div>
                           <span className="font-mono text-xs text-white/25 shrink-0">
                             {exp.period}
